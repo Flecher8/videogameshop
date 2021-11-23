@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace VideoGameShop
 {
-    public partial class Form1 : Form
+    public partial class AdminMainForm : Form
     {
-        public Form1()
+        public AdminMainForm()
         {
             InitializeComponent();
+        }
+
+        private void AdminMainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

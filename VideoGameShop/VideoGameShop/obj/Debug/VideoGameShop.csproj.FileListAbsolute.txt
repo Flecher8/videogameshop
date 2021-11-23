@@ -1,0 +1,10 @@
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\bin\Debug\VideoGameShop.exe.config
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\bin\Debug\VideoGameShop.exe
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\bin\Debug\VideoGameShop.pdb
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.csprojAssemblyReference.cache
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.Properties.Resources.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.csproj.GenerateResource.cache
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.csproj.CoreCompileInputs.cache
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.exe
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.pdb
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.LoginAndRegisterForm.resources
