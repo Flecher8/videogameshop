@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Realizators\AdminMainFormRealizer.cs" />
     <Compile Include="Realizators\UserMainFormRealizer.cs" />
     <Compile Include="View\AdminMainForm.cs">
       <SubType>Form</SubType>
@@ -85,6 +86,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
@@ -101,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\videogames.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\videogame.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

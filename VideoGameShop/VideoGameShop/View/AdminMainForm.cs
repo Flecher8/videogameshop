@@ -12,12 +12,54 @@ namespace VideoGameShop
 {
     public partial class AdminMainForm : Form
     {
+        AdminMainFormRealizer realizer;
         public AdminMainForm()
         {
             InitializeComponent();
+            realizer = new AdminMainFormRealizer();
         }
 
         private void AdminMainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonDevelopers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sQLЗапросыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonPublishers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonVideoGames_Click(object sender, EventArgs e)
         {
 
         }
