@@ -8,3 +8,5 @@ C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чи�
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.exe
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.pdb
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.LoginAndRegisterForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.AdminMainForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.UserMainForm.resources

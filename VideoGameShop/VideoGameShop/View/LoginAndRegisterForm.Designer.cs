@@ -119,6 +119,7 @@ namespace VideoGameShop
             this.buttonRegister.TabIndex = 4;
             this.buttonRegister.Text = "Регистрация";
             this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // textBoxRegisterPassword
             // 
@@ -179,6 +180,7 @@ namespace VideoGameShop
             this.buttonLogin.TabIndex = 14;
             this.buttonLogin.Text = "Войти";
             this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // textBoxLoginPassword
             // 

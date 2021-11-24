@@ -63,7 +63,7 @@
     <Compile Include="Model\VideoGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Realizators\LoginAndRegisterFormRealizator.cs" />
+    <Compile Include="Realizators\LoginAndRegisterFormRealizer.cs" />
     <Compile Include="View\UserMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
