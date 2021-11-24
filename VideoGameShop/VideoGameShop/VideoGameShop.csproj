@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Realizators\UserMainFormRealizer.cs" />
     <Compile Include="View\AdminMainForm.cs">
       <SubType>Form</SubType>
     </Compile>

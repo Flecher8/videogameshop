@@ -12,7 +12,7 @@ namespace VideoGameShop
 {
     public partial class UserMainForm : Form
     {
-        public UserMainForm()
+        public UserMainForm(User user)
         {
             InitializeComponent();
         }

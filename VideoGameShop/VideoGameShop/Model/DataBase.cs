@@ -52,7 +52,6 @@ namespace VideoGameShop
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
 
                 dataAdapter.Fill(dataTable);
-
                 connection.Close();
             }
             catch(Exception ex)
@@ -62,6 +61,24 @@ namespace VideoGameShop
             }
             
             return dataTable;
+        }
+        public void UpdateDataBase(string query)
+        {
+            try
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.ExecuteNonQuery();
+
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                connection.Close();
+                MessageBox.Show($"UpdateDataBase Error:  {ex.Message}");
+            }
         }
     }
 }

@@ -41,7 +41,7 @@ namespace VideoGameShop
         }
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-
+            realizer.registerProsses(textBoxRegisterLogin, textBoxRegisterPassword, textBoxRegisterRepPassword);
         }
     }
 }

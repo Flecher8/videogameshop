@@ -13,28 +13,36 @@ namespace VideoGameShop
     {
         private DataBase DB = new DataBase();
         private Form form;
-        private bool checkUser(User user)
+        // Проверка есть пользователь с таким login
+        private bool findUser(User user)
         {
 
-            DataTable data =  DB.GetDataBase($"SELECT * FROM Users WHERE user_login='{user.Login}' AND password='{user.Password}'");
+            DataTable data =  DB.GetDataBase($"SELECT * FROM Users WHERE user_login='{user.Login}'");
             if (data.Rows.Count == 1)
                 return true;
-            MessageBox.Show("Такого пользователя нету. Пожалуйста повторите попытку.");
             return false;
         }
-        // Функция проверяющаа не пустые ли формы.
+        // Проверка совпадает ли пароль с паролем в базе данных для данного login
+        private bool checkUserPassword(User user)
+        {
+            DataTable data = DB.GetDataBase($"SELECT * FROM Users WHERE user_login='{user.Login}' AND password='{user.Password}'");
+            if (data.Rows.Count == 1)
+                return true;
+            return false;
+        }
+        // Функция проверяющаа не пустые ли поля.
         private bool checkEmptyControls(params Control[] arr)
         {
             for(int i = 0; i < arr.Length; i++)
             {
                 if(arr[i].Text == "")
                 {
-                    MessageBox.Show("Не все поля заполнены");
                     return false;
                 }
             }
             return true;
         }
+        // Находит тип пользователя
         private string findUserType(User user)
         {
             DataTable data = DB.GetDataBase($"SELECT user_type FROM Users WHERE user_login='{user.Login}'");
@@ -45,54 +53,98 @@ namespace VideoGameShop
             }
             return userType;
         }
+        private void openUserMainForm(User user)
+        {
+            UserMainForm userMainForm = new UserMainForm(user);
+            form.Hide();
+            userMainForm.ShowDialog();
+            form.Show();
+        }
+        private void openAdminMainForm()
+        {
+            AdminMainForm adminMainForm = new AdminMainForm();
+            form.Hide();
+            adminMainForm.ShowDialog();
+            form.Show();
+        }
         public LoginAndRegisterFormRealizer (LoginAndRegisterForm form)
         {
             this.form = form;
         }
+        // Выводит оперделённую панель на передний план
         public void bringToFrontPanel(Panel panel)
         {
             panel.BringToFront();
         }
         public void loginProsses(params Control[] arr)
         {
-            User user = new User(arr[0].Text, arr[1].Text);
             // CheckFE
             // If not добавить ошибку о том что такого пользователя не существует!!!!!!!!!
-            if (!checkEmptyControls(arr) || !checkUser(user))
+            if (!checkEmptyControls(arr))
             {
+                MessageBox.Show("Не все поля заполнены");
+                return;
+            }
+
+            User user = new User(arr[0].Text, arr[1].Text);
+
+            // CheckFE
+            if (!findUser(user))
+            {
+                MessageBox.Show("Такого пользователя нету в нашей базе данных. Пожалуйста повторите попытку.");
+                return;
+            }
+            if(!checkUserPassword(user))
+            {
+                MessageBox.Show("Не правильный пароль. Пожалуйста повторите попытку.");
                 return;
             }
 
             string userType = this.findUserType(user);
+
             // Для пользователей типо админ открывается админская форма, для всех остальных пользователей
             // открывается пользовательская форма
             if(userType == "admin")
             {
-                AdminMainForm adminMainForm= new AdminMainForm();
-                form.Hide();
-                adminMainForm.ShowDialog();
-                form.Show();
+                openAdminMainForm();
             }
             else
             {
-                UserMainForm userMainForm = new UserMainForm();
-                form.Hide();
-                userMainForm.ShowDialog();
-                form.Show();
+                openUserMainForm(user);
             }
         }
 
-        public void registerProsses(string login, string password, string confirmPassword)
+        public void registerProsses(params Control[] arr)
         {
-            if(password == confirmPassword && password == "")
+            // CheckFE
+            if (!checkEmptyControls(arr))
             {
-                // Выбить ошибку о том что пароль не может быть пустым
+                MessageBox.Show("Не все поля заполнены");
+                return;
             }
-            if(password != confirmPassword)
+            User user = new User(arr[0].Text, arr[1].Text);
+            // CheckFE
+            if (findUser(user))
+            {
+                MessageBox.Show("Пользователь с таким именем уже есть в базе данных. Пожалуйста выбирите другой логин.");
+                return;
+            }
+            // CheckFE
+            if (arr[1].Text != arr[2].Text)
             {
                 // Выбить ошибку о том что пароль не совпадает с confirm паролем
+                MessageBox.Show("Поле 'пароль' и поле 'повторите пароль' не совпадают. Пожалуйста повторите попытку.");
+                return;
             }
 
+            // Регистрируеться новый пользователь
+            DB.UpdateDataBase($"INSERT INTO Users (user_login, password, user_type) VALUES ('{user.Login}', '{user.Password}', 'user')");
+            
+            // Сообщение об успешной регистрации
+            MessageBox.Show("Регистрация прошла успешно.");
+
+            // Переход к главной форме для пользователей
+            openUserMainForm(user);
         }
     }
 }
