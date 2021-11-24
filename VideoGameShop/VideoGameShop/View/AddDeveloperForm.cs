@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace VideoGameShop
 {
-    public partial class DevelopersForm : Form
+    public partial class AddDeveloperForm : Form
     {
-        DevelopersFormRealizer realizer;
-        public DevelopersForm()
+        AddDeveloperFormRealizer realizer;
+        public AddDeveloperForm()
         {
             InitializeComponent();
-            realizer = new DevelopersFormRealizer(this);
+            realizer = new AddDeveloperFormRealizer(this);
         }
 
-        private void DevelopersForm_Load(object sender, EventArgs e)
+        private void AddDeveloperForm_Load(object sender, EventArgs e)
         {
-            realizer.UpdateDataGridView(dataGridView1);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            realizer.OpenAddDeveloperForm();
-            realizer.UpdateDataGridView(dataGridView1);
+            realizer.AddDeveloper(textBox1, textBox2, textBox3);
         }
     }
 }

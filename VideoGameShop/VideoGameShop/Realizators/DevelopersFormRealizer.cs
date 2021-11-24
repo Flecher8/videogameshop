@@ -21,5 +21,12 @@ namespace VideoGameShop
         {
             table.DataSource = DB.GetDataBase("SELECT developer_company AS 'Название компании', location AS 'Локация', official_page AS 'Сайт' FROM Developers");
         }
+        public void OpenAddDeveloperForm()
+        {
+            AddDeveloperForm addDeveloperForm = new AddDeveloperForm();
+            form.Hide();
+            addDeveloperForm.ShowDialog();
+            form.Show();
+        }
     }
 }
