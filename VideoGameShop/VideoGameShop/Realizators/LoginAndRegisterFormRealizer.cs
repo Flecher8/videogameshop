@@ -19,7 +19,21 @@ namespace VideoGameShop
             DataTable data =  DB.GetDataBase($"SELECT * FROM Users WHERE user_login='{user.Login}' AND password='{user.Password}'");
             if (data.Rows.Count == 1)
                 return true;
+            MessageBox.Show("Такого пользователя нету. Пожалуйста повторите попытку.");
             return false;
+        }
+        // Функция проверяющаа не пустые ли формы.
+        private bool checkEmptyControls(params Control[] arr)
+        {
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i].Text == "")
+                {
+                    MessageBox.Show("Не все поля заполнены");
+                    return false;
+                }
+            }
+            return true;
         }
         private string findUserType(User user)
         {
@@ -39,11 +53,15 @@ namespace VideoGameShop
         {
             panel.BringToFront();
         }
-        public void loginProsses(User user)
+        public void loginProsses(params Control[] arr)
         {
+            User user = new User(arr[0].Text, arr[1].Text);
+            // CheckFE
             // If not добавить ошибку о том что такого пользователя не существует!!!!!!!!!
-            if (checkUser(user))
-                MessageBox.Show("Hello");
+            if (!checkEmptyControls(arr) || !checkUser(user))
+            {
+                return;
+            }
 
             string userType = this.findUserType(user);
             // Для пользователей типо админ открывается админская форма, для всех остальных пользователей
@@ -57,14 +75,12 @@ namespace VideoGameShop
             }
             else
             {
-                UserMainForm adminMainForm = new UserMainForm();
+                UserMainForm userMainForm = new UserMainForm();
                 form.Hide();
-                adminMainForm.ShowDialog();
+                userMainForm.ShowDialog();
                 form.Show();
             }
         }
-
-        // Функция проверяющаа не пустые ли формы.
 
         public void registerProsses(string login, string password, string confirmPassword)
         {
