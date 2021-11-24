@@ -16,7 +16,7 @@ namespace VideoGameShop
         public AdminMainForm()
         {
             InitializeComponent();
-            realizer = new AdminMainFormRealizer();
+            realizer = new AdminMainFormRealizer(this);
         }
 
         private void AdminMainForm_Load(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace VideoGameShop
 
         private void buttonDevelopers_Click(object sender, EventArgs e)
         {
-
+            realizer.OpenDevelopersForm();
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)

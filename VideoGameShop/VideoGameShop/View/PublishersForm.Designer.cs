@@ -1,5 +1,5 @@
 ﻿
-namespace VideoGameShop.View
+namespace VideoGameShop
 {
     partial class PublishersForm
     {
@@ -29,10 +29,18 @@ namespace VideoGameShop.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // PublishersForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "PublishersForm";
             this.Text = "PublishersForm";
+            this.Load += new System.EventHandler(this.PublishersForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

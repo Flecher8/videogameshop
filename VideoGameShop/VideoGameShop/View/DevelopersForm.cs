@@ -8,13 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VideoGameShop.View
+namespace VideoGameShop
 {
     public partial class DevelopersForm : Form
     {
+        DevelopersFormRealizer realizer;
         public DevelopersForm()
         {
             InitializeComponent();
+            realizer = new DevelopersFormRealizer(this);
+        }
+
+        private void DevelopersForm_Load(object sender, EventArgs e)
+        {
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

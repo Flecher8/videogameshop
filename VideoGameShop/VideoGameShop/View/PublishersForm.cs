@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace VideoGameShop.View
+namespace VideoGameShop
 {
     public partial class PublishersForm : Form
     {
         public PublishersForm()
         {
             InitializeComponent();
+        }
+
+        private void PublishersForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,9 +13,16 @@ namespace VideoGameShop
     {
         private DataBase DB = new DataBase();
         private Form form;
-        public AdminMainFormRealizer()
+        public AdminMainFormRealizer(AdminMainForm form)
         {
-
+            this.form = form;
+        }
+        public void OpenDevelopersForm()
+        {
+            DevelopersForm developersMainForm = new DevelopersForm();
+            form.Hide();
+            developersMainForm.ShowDialog();
+            form.Show();
         }
     }
 }
