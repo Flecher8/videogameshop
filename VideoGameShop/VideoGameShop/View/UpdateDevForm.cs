@@ -25,12 +25,12 @@ namespace VideoGameShop
 
         private void UpdateDevForm_Load(object sender, EventArgs e)
         {
-
+            realizer.fillTextBoxes(textBox1, textBox2, textBox3);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            realizer.fillTextBoxes(textBox1, textBox2, textBox3);
+            realizer.UpdateDeveloper(textBox1, textBox2, textBox3);
         }
     }
 }
