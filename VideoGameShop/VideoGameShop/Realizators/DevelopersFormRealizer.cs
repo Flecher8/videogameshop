@@ -28,5 +28,22 @@ namespace VideoGameShop
             addDeveloperForm.ShowDialog();
             form.Show();
         }
+        public void OpenUpdateDeveloperForm(DataGridView table)
+        {
+            int numberOfSelectedRows = table.SelectedRows.Count;
+            if (numberOfSelectedRows > 1)
+            {
+                DialogResult result = MessageBox.Show("Выберите только одну строку из таблицы.",
+                    "Выбор строк",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+            UpdateDevForm updateDeveloperForm = 
+                new UpdateDevForm(table.SelectedRows[0].Cells[0].Value.ToString());
+            form.Hide();
+            updateDeveloperForm.ShowDialog();
+            form.Show();
+        }
     }
 }

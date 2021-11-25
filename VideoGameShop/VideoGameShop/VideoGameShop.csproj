@@ -49,6 +49,7 @@
     <Compile Include="Realizators\AddDeveloperFormRealizer.cs" />
     <Compile Include="Realizators\AdminMainFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
+    <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
     <Compile Include="Realizators\UserMainFormRealizer.cs" />
     <Compile Include="View\AddDeveloperForm.cs">
       <SubType>Form</SubType>
@@ -86,6 +87,12 @@
     <Compile Include="View\PublishersForm.Designer.cs">
       <DependentUpon>PublishersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateDevForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateDevForm.Designer.cs">
+      <DependentUpon>UpdateDevForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +123,9 @@
     </Compile>
     <EmbeddedResource Include="View\PublishersForm.resx">
       <DependentUpon>PublishersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateDevForm.resx">
+      <DependentUpon>UpdateDevForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
