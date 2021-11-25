@@ -16,7 +16,7 @@ namespace VideoGameShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DevelopersForm());
+            Application.Run(new PublishersForm());
         }
     }
 }

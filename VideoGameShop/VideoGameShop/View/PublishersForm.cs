@@ -12,14 +12,45 @@ namespace VideoGameShop
 {
     public partial class PublishersForm : Form
     {
+        PublishersFormRealizer realizer;
         public PublishersForm()
         {
             InitializeComponent();
+            realizer = new PublishersFormRealizer(this);
         }
 
         private void PublishersForm_Load(object sender, EventArgs e)
         {
+            realizer.UpdateDataGridView(dataGridView1);
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            realizer.OpenAddPublisherForm();
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            realizer.OpenUpdatePublisherForm(dataGridView1);
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            realizer.DeletePublisher(dataGridView1);
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            realizer.CleanTextBoxes(textBox1, textBox2);
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            realizer.FindPublisher(dataGridView1, textBox1, textBox2);
         }
     }
 }
