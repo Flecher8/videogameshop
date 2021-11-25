@@ -156,6 +156,7 @@ namespace VideoGameShop
             this.Controls.Add(this.buttonVideoGames);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MinimumSize = new System.Drawing.Size(769, 489);
             this.Name = "AdminMainForm";
             this.Text = "AdminMainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMainForm_FormClosing);

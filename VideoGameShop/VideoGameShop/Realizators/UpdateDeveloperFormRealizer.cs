@@ -13,12 +13,12 @@ namespace VideoGameShop
     {
         DataBase DB = new DataBase();
         UpdateDevForm form;
-        private string developer_company;
+        private string developerCompany;
 
         private bool checkDeveloperUniqueness(string company_name)
         {
             // Такой разработчик есть, но название не изменилось у меняемого разработчика
-            if (company_name == developer_company)
+            if (company_name == developerCompany)
                 return true;
             
             DataTable data = DB.GetDataBase($"SELECT * FROM Developers WHERE developer_company='{company_name}'");
@@ -41,11 +41,11 @@ namespace VideoGameShop
         public UpdateDeveloperFormRealizer(UpdateDevForm form, string developer_company)
         {
             this.form = form;
-            this.developer_company = developer_company;
+            this.developerCompany = developer_company;
         }
         public DataTable getDeveloper()
         {
-            return DB.GetDataBase($"SELECT * FROM Developers WHERE developer_company='{developer_company}'");
+            return DB.GetDataBase($"SELECT * FROM Developers WHERE developer_company='{developerCompany}'");
         }
         public void fillTextBoxes(params Control[] arr)
         {
@@ -69,7 +69,7 @@ namespace VideoGameShop
             if(UserAgreeToUpdateDeveloper())
             {
                 DB.UpdateDataBase($"UPDATE Developers SET developer_company='{arr[0].Text}', " +
-                $"location='{arr[1].Text}', official_page='{arr[2].Text}' WHERE developer_company='{developer_company}'");
+                $"location='{arr[1].Text}', official_page='{arr[2].Text}' WHERE developer_company='{developerCompany}'");
             }
             form.Close();
         }

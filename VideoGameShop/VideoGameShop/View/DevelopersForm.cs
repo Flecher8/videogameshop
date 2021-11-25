@@ -35,5 +35,22 @@ namespace VideoGameShop
             realizer.OpenUpdateDeveloperForm(dataGridView1);
             realizer.UpdateDataGridView(dataGridView1);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            realizer.DeleteDeveloper(dataGridView1);
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            realizer.CleanTextBoxes(textBox1, textBox2);
+            realizer.UpdateDataGridView(dataGridView1);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            realizer.FindDevelopers(dataGridView1, textBox1, textBox2);
+        }
     }
 }

@@ -229,6 +229,7 @@ namespace VideoGameShop
             this.Controls.Add(this.buttonSwitchRegistration);
             this.Controls.Add(this.buttonSwitchLogin);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MaximumSize = new System.Drawing.Size(520, 600);
             this.MinimumSize = new System.Drawing.Size(520, 600);
             this.Name = "LoginAndRegisterForm";
             this.Text = "Login";

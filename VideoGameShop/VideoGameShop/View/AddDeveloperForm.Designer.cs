@@ -125,7 +125,7 @@ namespace VideoGameShop
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "AddDeveloperForm";
-            this.Text = "AddDeveloperForm";
+            this.Text = "Добавление разработчиков";
             this.Load += new System.EventHandler(this.AddDeveloperForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

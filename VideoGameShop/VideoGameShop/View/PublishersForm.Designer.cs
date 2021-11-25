@@ -35,7 +35,8 @@ namespace VideoGameShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 485);
+            this.MinimumSize = new System.Drawing.Size(816, 524);
             this.Name = "PublishersForm";
             this.Text = "PublishersForm";
             this.Load += new System.EventHandler(this.PublishersForm_Load);
