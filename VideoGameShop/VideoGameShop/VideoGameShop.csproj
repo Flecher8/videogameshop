@@ -47,18 +47,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Realizators\AddDeveloperFormRealizer.cs" />
+    <Compile Include="Realizators\AddGameFormRealizer.cs" />
     <Compile Include="Realizators\AddPublisherFormRealizer.cs" />
     <Compile Include="Realizators\AdminMainFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
     <Compile Include="Realizators\PublishersFormRealizer.cs" />
     <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
+    <Compile Include="Realizators\UpdateGameFormRealizer.cs" />
     <Compile Include="Realizators\UpdatePublisherFormRealizer.cs" />
     <Compile Include="Realizators\UserMainFormRealizer.cs" />
+    <Compile Include="Realizators\VideoGamesFormRealizer.cs" />
     <Compile Include="View\AddDeveloperForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\AddDeveloperForm.Designer.cs">
       <DependentUpon>AddDeveloperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddGameForm.Designer.cs">
+      <DependentUpon>AddGameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AddPublisherForm.cs">
       <SubType>Form</SubType>
@@ -102,6 +111,12 @@
     <Compile Include="View\UpdateDevForm.Designer.cs">
       <DependentUpon>UpdateDevForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdateGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdateGameForm.Designer.cs">
+      <DependentUpon>UpdateGameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UpdatePublisherForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +129,17 @@
     <Compile Include="View\UserMainForm.Designer.cs">
       <DependentUpon>UserMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\VideoGamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\VideoGamesForm.Designer.cs">
+      <DependentUpon>VideoGamesForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\AddDeveloperForm.resx">
       <DependentUpon>AddDeveloperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddGameForm.resx">
+      <DependentUpon>AddGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddPublisherForm.resx">
       <DependentUpon>AddPublisherForm.cs</DependentUpon>
@@ -145,11 +169,17 @@
     <EmbeddedResource Include="View\UpdateDevForm.resx">
       <DependentUpon>UpdateDevForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdateGameForm.resx">
+      <DependentUpon>UpdateGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UpdatePublisherForm.resx">
       <DependentUpon>UpdatePublisherForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserMainForm.resx">
       <DependentUpon>UserMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\VideoGamesForm.resx">
+      <DependentUpon>VideoGamesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

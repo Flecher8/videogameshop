@@ -16,3 +16,6 @@ C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чи�
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.UpdateDevForm.resources
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.AddPublisherForm.resources
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.UpdatePublisherForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.VideoGamesForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.AddGameForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.UpdateGameForm.resources
