@@ -676,8 +676,9 @@ namespace VideoGameShop
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(784, 967);
             this.Name = "AddGameForm";
-            this.Text = "AddGameForm";
+            this.Text = "Добавление компьютерных игр";
             this.Load += new System.EventHandler(this.AddGameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

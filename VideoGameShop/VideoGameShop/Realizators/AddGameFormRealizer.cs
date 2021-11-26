@@ -12,24 +12,25 @@ namespace VideoGameShop
     class AddGameFormRealizer
     {
         protected DataBase DB = new DataBase();
-        private AddGameForm form;
+        protected Form form;
 
         protected List<CheckBox> checkBoxes = new List<CheckBox>();
         protected List<Control> controls = new List<Control>();
         protected ComboBox developersComboBox;
         protected ComboBox publishersComboBox;
 
-        protected bool checkGameUniqueness(string gameName)
+        protected virtual bool checkGameUniqueness(string gameName)
         {
             DataTable data = DB.GetDataBase($"SELECT * FROM Games WHERE game_name='{gameName}'");
             if (data.Rows.Count == 1)
                 return false;
             return true;
         }
-        public AddGameFormRealizer(AddGameForm form)
+        public AddGameFormRealizer(Form form)
         {
             this.form = form;
         }
+
         public void getControls(params Control[] arr)
         {
             for(int i = 0; i < arr.Length; i++)

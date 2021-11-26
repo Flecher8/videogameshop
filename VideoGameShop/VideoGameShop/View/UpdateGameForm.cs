@@ -12,18 +12,25 @@ namespace VideoGameShop
 {
     public partial class UpdateGameForm : Form
     {
+        UpdateGameFormRealizer realizer;
         public UpdateGameForm()
         {
             InitializeComponent();
         }
         public UpdateGameForm(string gameName)
         {
-
+            InitializeComponent();
+            realizer = new UpdateGameFormRealizer(this, gameName);
         }
 
         private void UpdateGameForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            realizer.fillFields();
         }
     }
 }

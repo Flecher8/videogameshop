@@ -33,6 +33,7 @@ namespace VideoGameShop
         private void button3_Click(object sender, EventArgs e)
         {
             realizer.OpenUpdateGameForm(dataGridView1);
+            realizer.UpdateDataGridView(dataGridView1);
         }
 
         private void button4_Click(object sender, EventArgs e)
