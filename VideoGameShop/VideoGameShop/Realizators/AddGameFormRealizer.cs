@@ -74,7 +74,6 @@ namespace VideoGameShop
             {
                 publishersComboBox.Items.Add(table.Rows[i].Field<string>("publisher_company"));
             }
-            //publishersComboBox.SelectedIndex = publishersComboBox.Items.IndexOf("Valve"); !!!!!!!!!!!!!
         }
         protected void fillComboBoxDevelopers()
         {
@@ -157,7 +156,7 @@ namespace VideoGameShop
             if (controls[7].Text != "")
             {
                 string e = "";
-                e = isCorrectNumber(0, 10000000, controls[7]);
+                e = isCorrectNumber(1, 10000000, controls[7]);
                 if (e != "")
                 {
                     error += "\n Данные в поле 'Цена' " + e + "\n";
@@ -293,9 +292,9 @@ namespace VideoGameShop
             }
             else
             {
-                DataTable table1 = DB.GetDataBase("SELECT MAX(product_id) FROM Storage");
+                DataTable table1 = DB.GetDataBase("SELECT MAX(product_id) AS MAX_PRODUCT_ID FROM Storage");
                 DB.UpdateDataBase($"INSERT INTO Storage (product_id, game_name, amount) " +
-                    $"VALUES ('{table1.Rows[0].Field<int>("product_id")}', '{controls[0].Text}', '{controls[10].Text}')");
+                    $"VALUES ('{table1.Rows[0].Field<int>("MAX_PRODUCT_ID") + 1}', '{controls[0].Text}', '{controls[10].Text}')");
             }
             
 
