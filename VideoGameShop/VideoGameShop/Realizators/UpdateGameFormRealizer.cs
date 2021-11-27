@@ -87,7 +87,7 @@ namespace VideoGameShop
                 return;
             }
 
-            
+
             // Обновить запись в таблице Games
             DB.UpdateDataBase($"UPDATE Games SET game_name='{controls[0].Text}', " +
                 $"developer_company='{developersComboBox.SelectedItem.ToString()}', " +
@@ -102,10 +102,10 @@ namespace VideoGameShop
                 $"age_limit='{controls[8].Text}', " +
                 $"official_page='{controls[9].Text}'" +
                 $"WHERE game_name='{GameName}'");
-            
+
             // Обновить запись в таблицу Games-Genres
-            DB.UpdateDataBase($"DELETE FROM [Games-Genres] WHERE game_name='{GameName}'");
-            
+            DB.UpdateDataBase($"DELETE FROM [Games-Genres] WHERE game_name='{controls[0].Text}'");
+
             List<string> genres = new List<string>();
             for (int i = 0; i < checkBoxes.Count; i++)
             {
@@ -120,7 +120,7 @@ namespace VideoGameShop
             }
 
             // Обновить запись в таблицу Products
-            DB.UpdateDataBase($"UPDATE Storage SET amount='{controls[10].Text}' WHERE game_name='{GameName}'");
+            DB.UpdateDataBase($"UPDATE Storage SET amount='{controls[10].Text}' WHERE game_name='{controls[0].Text}'");
 
 
             MessageBox.Show("Данные были успешно изменены.");
