@@ -47,7 +47,7 @@ namespace VideoGameShop
         {
             if (e.RowIndex < 0)
                 return;
-            MessageBox.Show($"{dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()}");
+            realizer.OpenBuyGameForm(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
         private void dataGridView1_ColumnHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

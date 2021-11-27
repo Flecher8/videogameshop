@@ -50,6 +50,7 @@
     <Compile Include="Realizators\AddGameFormRealizer.cs" />
     <Compile Include="Realizators\AddPublisherFormRealizer.cs" />
     <Compile Include="Realizators\AdminMainFormRealizer.cs" />
+    <Compile Include="Realizators\BuyGameFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
     <Compile Include="Realizators\PublishersFormRealizer.cs" />
     <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
@@ -80,6 +81,12 @@
     </Compile>
     <Compile Include="View\AdminMainForm.Designer.cs">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BuyGameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BuyGameForm.Designer.cs">
+      <DependentUpon>BuyGameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DevelopersForm.cs">
       <SubType>Form</SubType>
@@ -146,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AdminMainForm.resx">
       <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BuyGameForm.resx">
+      <DependentUpon>BuyGameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DevelopersForm.resx">
       <DependentUpon>DevelopersForm.cs</DependentUpon>

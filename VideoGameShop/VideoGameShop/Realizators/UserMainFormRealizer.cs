@@ -17,9 +17,12 @@ namespace VideoGameShop
             this.form = form;
             this.user = user;
         }
-        public void OpenBuyGameForm()
+        public void OpenBuyGameForm(string gameName)
         {
-
+            BuyGameForm buyGameForm = new BuyGameForm(user, gameName);
+            form.Hide();
+            buyGameForm.ShowDialog();
+            form.Show();
         }
     }
 }

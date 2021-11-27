@@ -44,7 +44,7 @@ namespace VideoGameShop
                 "critics_score AS 'Оценка критиков', " +
                 "cpu_name AS 'Мин. Процессор', " +
                 "videocard_name AS 'Мин. Видеокарта', " +
-                "ram_amount AS 'Мин. Оп. Пам.', " +
+                "ram_amount AS 'Мин. ОП.', " +
                 "price AS 'Цена', " +
                 "age_limit AS 'Возрастное ограничение', " +
                 "official_page AS 'Сайт' " +
