@@ -158,7 +158,7 @@ namespace VideoGameShop
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(769, 489);
             this.Name = "AdminMainForm";
-            this.Text = "AdminMainForm";
+            this.Text = "Главная страница администратора";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMainForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminMainForm_Load);
             this.menuStrip1.ResumeLayout(false);

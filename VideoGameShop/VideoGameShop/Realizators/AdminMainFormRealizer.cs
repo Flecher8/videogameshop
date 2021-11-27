@@ -24,5 +24,19 @@ namespace VideoGameShop
             developersMainForm.ShowDialog();
             form.Show();
         }
+        public void OpenPublishersForm()
+        {
+            PublishersForm publishersForm = new PublishersForm();
+            form.Hide();
+            publishersForm.ShowDialog();
+            form.Show();
+        }
+        public void OpenVideoGamesForm()
+        {
+            VideoGamesForm videoGamesForm = new VideoGamesForm();
+            form.Hide();
+            videoGamesForm.ShowDialog();
+            form.Show();
+        }
     }
 }

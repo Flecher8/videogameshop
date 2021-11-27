@@ -56,12 +56,12 @@ namespace VideoGameShop
 
         private void buttonPublishers_Click(object sender, EventArgs e)
         {
-
+            realizer.OpenPublishersForm();
         }
 
         private void buttonVideoGames_Click(object sender, EventArgs e)
         {
-
+            realizer.OpenVideoGamesForm();
         }
     }
 }

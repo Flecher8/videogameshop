@@ -12,11 +12,11 @@ namespace VideoGameShop
     class VideoGamesFormRealizer
     {
         DataBase DB = new DataBase();
-        private VideoGamesForm form;
+        protected Form form;
         protected List<CheckBox> checkBoxes = new List<CheckBox>();
         protected List<Control> controls = new List<Control>();
 
-        public VideoGamesFormRealizer(VideoGamesForm form)
+        public VideoGamesFormRealizer(Form form)
         {
             this.form = form;
         }
