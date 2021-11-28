@@ -32,5 +32,10 @@ namespace VideoGameShop
         {
             realizer.makeMarkByUser(textBox1, label14, label15, textBox1, button1);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            realizer.OpenCardForm();
+        }
     }
 }

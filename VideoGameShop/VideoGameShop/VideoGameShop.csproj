@@ -51,6 +51,7 @@
     <Compile Include="Realizators\AddPublisherFormRealizer.cs" />
     <Compile Include="Realizators\AdminMainFormRealizer.cs" />
     <Compile Include="Realizators\BuyGameFormRealizer.cs" />
+    <Compile Include="Realizators\CardFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
     <Compile Include="Realizators\PublishersFormRealizer.cs" />
     <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
@@ -87,6 +88,12 @@
     </Compile>
     <Compile Include="View\BuyGameForm.Designer.cs">
       <DependentUpon>BuyGameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CardForm.Designer.cs">
+      <DependentUpon>CardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\DevelopersForm.cs">
       <SubType>Form</SubType>
@@ -157,6 +164,9 @@
     <EmbeddedResource Include="View\BuyGameForm.resx">
       <DependentUpon>BuyGameForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\CardForm.resx">
+      <DependentUpon>CardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DevelopersForm.resx">
       <DependentUpon>DevelopersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +201,7 @@
     <EmbeddedResource Include="View\VideoGamesForm.resx">
       <DependentUpon>VideoGamesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -206,6 +217,35 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

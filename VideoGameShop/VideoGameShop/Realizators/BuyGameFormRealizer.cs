@@ -31,20 +31,20 @@ namespace VideoGameShop
         }
         public void fillLabels()
         {
-            DataTable table = DB.GetDataBase("SELECT game_name AS 'Название', " +
-                "developer_company AS 'Разработчик', " +
-                "publisher_company AS 'Публикатор', " +
-                "ARRAY_OF_GENRES AS 'Жанры', " +
-                "release_year AS 'Год выхода', " +
-                "critics_score AS 'Оценка критиков', " +
-                "cpu_name AS 'Мин. Процессор', " +
-                "videocard_name AS 'Мин. Видеокарта', " +
-                "ram_amount AS 'Мин. ОП.', " +
-                "price AS 'Цена', " +
-                "age_limit AS 'Возрастное ограничение', " +
-                "official_page AS 'Сайт' " +
-                "FROM Games, (SELECT Games.game_name AS GName, STRING_AGG(genre_name, ';') AS ARRAY_OF_GENRES FROM Games JOIN [Games-Genres] ON Games.game_name = [Games-Genres].game_name GROUP BY Games.game_name) T1 " +
-                "WHERE  Games.game_name = T1.GName");
+            DataTable table = DB.GetDataBase($"SELECT game_name AS 'Название', " +
+                $"developer_company AS 'Разработчик', " +
+                $"publisher_company AS 'Публикатор', " +
+                $"ARRAY_OF_GENRES AS 'Жанры', " +
+                $"release_year AS 'Год выхода', " +
+                $"critics_score AS 'Оценка критиков', " +
+                $"cpu_name AS 'Мин. Процессор', " +
+                $"videocard_name AS 'Мин. Видеокарта', " +
+                $"ram_amount AS 'Мин. ОП.', " +
+                $"price AS 'Цена', " +
+                $"age_limit AS 'Возрастное ограничение', " +
+                $"official_page AS 'Сайт' " +
+                $"FROM Games, (SELECT Games.game_name AS GName, STRING_AGG(genre_name, ';') AS ARRAY_OF_GENRES FROM Games JOIN [Games-Genres] ON Games.game_name = [Games-Genres].game_name GROUP BY Games.game_name) T1 " +
+                $"WHERE  Games.game_name = T1.GName AND game_name='{GameName}'");
 
             labels[0].Text = table.Rows[0]["Название"].ToString();
             labels[1].Text = table.Rows[0]["Разработчик"].ToString();
@@ -91,9 +91,12 @@ namespace VideoGameShop
             MessageBox.Show("Спасибо за оценивание данной компьютерное игры.");
             checkIfHideMark(arr);
         }
-        public void BuyGame()
+        public void OpenCardForm()
         {
-
+            CardForm cardForm = new CardForm(user, labels[0].Text);
+            form.Hide();
+            cardForm.ShowDialog();
+            form.Show();
         }
         protected int? tryParseInt32(string text)
         {
