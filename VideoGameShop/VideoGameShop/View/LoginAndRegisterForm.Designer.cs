@@ -232,6 +232,7 @@ namespace VideoGameShop
             this.MaximumSize = new System.Drawing.Size(520, 600);
             this.MinimumSize = new System.Drawing.Size(520, 600);
             this.Name = "LoginAndRegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход/Регистрация";
             this.Load += new System.EventHandler(this.LoginRegisterForm_Load);
             this.panelRegister.ResumeLayout(false);

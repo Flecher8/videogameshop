@@ -549,6 +549,7 @@ namespace VideoGameShop
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(1240, 659);
             this.Name = "UserMainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная страница пользователя";
             this.Load += new System.EventHandler(this.UserMainForm_Load);
             this.menuStrip1.ResumeLayout(false);

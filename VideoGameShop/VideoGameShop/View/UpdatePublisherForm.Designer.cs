@@ -126,6 +126,7 @@ namespace VideoGameShop
             this.Controls.Add(this.label3);
             this.MinimumSize = new System.Drawing.Size(816, 333);
             this.Name = "UpdatePublisherForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение публикаторов";
             this.Load += new System.EventHandler(this.UpdatePublisherForm_Load);
             this.ResumeLayout(false);

@@ -122,5 +122,12 @@ namespace VideoGameShop
 
             MessageBox.Show("Отчёт успешно сохранён.");
         }
+        public void OpenStatisticForm(int number)
+        {
+            StatisticForm statisticForm = new StatisticForm(number);
+            form.Hide();
+            statisticForm.ShowDialog();
+            form.Show();
+        }
     }
 }

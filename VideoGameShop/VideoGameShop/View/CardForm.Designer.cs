@@ -108,7 +108,9 @@ namespace VideoGameShop
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.MinimumSize = new System.Drawing.Size(624, 264);
             this.Name = "CardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Заполнение данных карты";
             this.Load += new System.EventHandler(this.CardForm_Load);
             this.ResumeLayout(false);

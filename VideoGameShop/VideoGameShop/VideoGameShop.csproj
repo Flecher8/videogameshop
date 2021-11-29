@@ -54,6 +54,7 @@
     <Compile Include="Realizators\CardFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
     <Compile Include="Realizators\PublishersFormRealizer.cs" />
+    <Compile Include="Realizators\StatisticFormRealizer.cs" />
     <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
     <Compile Include="Realizators\UpdateGameFormRealizer.cs" />
     <Compile Include="Realizators\UpdatePublisherFormRealizer.cs" />
@@ -118,6 +119,12 @@
     </Compile>
     <Compile Include="View\PublishersForm.Designer.cs">
       <DependentUpon>PublishersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StatisticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StatisticForm.Designer.cs">
+      <DependentUpon>StatisticForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UpdateDevForm.cs">
       <SubType>Form</SubType>
@@ -185,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="View\PublishersForm.resx">
       <DependentUpon>PublishersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StatisticForm.resx">
+      <DependentUpon>StatisticForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UpdateDevForm.resx">
       <DependentUpon>UpdateDevForm.cs</DependentUpon>

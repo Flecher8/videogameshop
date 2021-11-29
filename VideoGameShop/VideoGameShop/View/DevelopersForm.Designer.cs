@@ -232,6 +232,7 @@ namespace VideoGameShop
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(816, 524);
             this.Name = "DevelopersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Разработчики";
             this.Load += new System.EventHandler(this.DevelopersForm_Load);
             this.menuStrip1.ResumeLayout(false);
