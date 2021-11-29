@@ -66,7 +66,7 @@ namespace VideoGameShop
             this.MinimumSize = new System.Drawing.Size(816, 462);
             this.Name = "StatisticForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StatisticForm";
+            this.Text = "Статистика";
             this.Load += new System.EventHandler(this.StatisticForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

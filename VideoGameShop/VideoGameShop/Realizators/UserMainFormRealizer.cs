@@ -24,5 +24,19 @@ namespace VideoGameShop
             buyGameForm.ShowDialog();
             form.Show();
         }
+        public void OpenStatisticForm(int number)
+        {
+            StatisticForm statisticForm = new StatisticForm(number);
+            form.Hide();
+            statisticForm.ShowDialog();
+            form.Show();
+        }
+        public void OpenAutoForm()
+        {
+            AutoForm autoForm = new AutoForm();
+            form.Hide();
+            autoForm.ShowDialog();
+            form.Show();
+        }
     }
 }

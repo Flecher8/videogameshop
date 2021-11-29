@@ -54,5 +54,30 @@ namespace VideoGameShop
         {
 
         }
+
+        private void tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenStatisticForm(1);
+        }
+
+        private void tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenStatisticForm(2);
+        }
+
+        private void tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenStatisticForm(3);
+        }
+
+        private void tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenStatisticForm(4);
+        }
+
+        private void подборИгрПоХарактеристикамToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenAutoForm();
+        }
     }
 }

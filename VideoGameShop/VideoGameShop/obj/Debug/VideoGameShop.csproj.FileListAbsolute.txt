@@ -23,3 +23,4 @@ C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чи�
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.CardForm.resources
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.csproj.ResolveComReference.cache
 C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.StatisticForm.resources
+C:\Games\ХНУРЕ\1\3 семестр\Курсовая\Программа\Чистовик\VideoGameShop\VideoGameShop\obj\Debug\VideoGameShop.AutoForm.resources

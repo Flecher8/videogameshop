@@ -158,6 +158,7 @@ namespace VideoGameShop
                     {
                         app.Quit();
                     }
+                    MessageBox.Show("Товарный чек успешно сохранён.");
                 }
             }
 
@@ -182,8 +183,7 @@ namespace VideoGameShop
             int amt = amount.Rows[0].Field<int>("amount") - 1;
             DB.UpdateDataBase($"UPDATE Storage SET amount='{amt}' WHERE game_name='{GameName}'");
 
-            MessageBox.Show("Товарный чек успешно сохранён.");
-
+            MessageBox.Show("Спасибо за покупку!");
             form.Close();
         }
         private void createWordFile()

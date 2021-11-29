@@ -11,7 +11,7 @@ namespace VideoGameShop
 {
     class VideoGamesFormRealizer
     {
-        DataBase DB = new DataBase();
+        protected DataBase DB = new DataBase();
         protected Form form;
         protected List<CheckBox> checkBoxes = new List<CheckBox>();
         protected List<Control> controls = new List<Control>();
@@ -141,7 +141,7 @@ namespace VideoGameShop
                 "critics_score AS 'Оценка критиков', " +
                 "cpu_name AS 'Мин. Процессор', " +
                 "videocard_name AS 'Мин. Видеокарта', " +
-                "ram_amount AS 'Мин. Оп. Пам.', " +
+                "ram_amount AS 'Мин. Оп.', " +
                 "price AS 'Цена', " +
                 "age_limit AS 'Возрастное ограничение', " +
                 "official_page AS 'Сайт' " +
