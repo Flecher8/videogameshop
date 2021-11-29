@@ -27,7 +27,6 @@ namespace VideoGameShop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //realizer.createWordFile();
             realizer.BuyGame(textBox1.Text, textBox2.Text);
         }
 

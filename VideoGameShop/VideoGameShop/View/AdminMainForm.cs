@@ -63,5 +63,10 @@ namespace VideoGameShop
         {
             realizer.OpenVideoGamesForm();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            realizer.fullWord();
+        }
     }
 }

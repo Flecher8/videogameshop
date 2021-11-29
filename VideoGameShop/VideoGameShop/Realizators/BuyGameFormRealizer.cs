@@ -93,10 +93,19 @@ namespace VideoGameShop
         }
         public void OpenCardForm()
         {
-            CardForm cardForm = new CardForm(user, labels[0].Text);
-            form.Hide();
-            cardForm.ShowDialog();
-            form.Show();
+            DataTable table = DB.GetDataBase($"SELECT amount FROM Storage WHERE game_name='{GameName}'");
+            if(table.Rows[0].Field<int>("amount") > 0)
+            {
+                CardForm cardForm = new CardForm(user, labels[0].Text);
+                form.Hide();
+                cardForm.ShowDialog();
+                form.Show();
+            }
+            else
+            {
+                MessageBox.Show("Данной игры нету на складе. Пожалуйста повторите попытку позже.");
+                return;
+            }
         }
         protected int? tryParseInt32(string text)
         {

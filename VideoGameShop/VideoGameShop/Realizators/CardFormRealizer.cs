@@ -172,8 +172,17 @@ namespace VideoGameShop
             {
                 month = month[1].ToString();
             }
+            // Заносим покупку в таблицу
             DB.UpdateDataBase($"INSERT INTO Sales (sale_id, user_login, game_name, sale_sum, day_sale, month_sale, year_sale) " +
                 $"Values ('{maxSale}', '{user.Login}', '{GameName}', '{prc}', '{day}', '{month}', '{now.ToString("yyyy")}')");
+            
+            // Обновляем хранилище
+            System.Data.DataTable amount = DB.GetDataBase($"SELECT amount FROM Storage WHERE game_name='{GameName}'");
+
+            int amt = amount.Rows[0].Field<int>("amount") - 1;
+            DB.UpdateDataBase($"UPDATE Storage SET amount='{amt}' WHERE game_name='{GameName}'");
+
+            MessageBox.Show("Товарный чек успешно сохранён.");
 
             form.Close();
         }
