@@ -79,5 +79,15 @@ namespace VideoGameShop
         {
             realizer.OpenAutoForm();
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenAboutForm();
+        }
     }
 }

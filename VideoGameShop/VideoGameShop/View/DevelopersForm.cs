@@ -52,5 +52,15 @@ namespace VideoGameShop
         {
             realizer.FindDevelopers(dataGridView1, textBox1, textBox2);
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenAboutForm();
+        }
     }
 }

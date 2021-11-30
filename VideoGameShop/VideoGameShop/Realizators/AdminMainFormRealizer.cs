@@ -27,6 +27,13 @@ namespace VideoGameShop
             developersMainForm.ShowDialog();
             form.Show();
         }
+        public void OpenSQLEditorForm()
+        {
+            SQLEditorForm sQLEditorForm = new SQLEditorForm();
+            form.Hide();
+            sQLEditorForm.ShowDialog();
+            form.Show();
+        }
         public void OpenPublishersForm()
         {
             PublishersForm publishersForm = new PublishersForm();
@@ -39,6 +46,13 @@ namespace VideoGameShop
             VideoGamesForm videoGamesForm = new VideoGamesForm();
             form.Hide();
             videoGamesForm.ShowDialog();
+            form.Show();
+        }
+        public void OpenAboutForm()
+        {
+            AboutProgramForm aboutProgramForm = new AboutProgramForm();
+            form.Hide();
+            aboutProgramForm.ShowDialog();
             form.Show();
         }
         // Доделать
@@ -63,6 +77,7 @@ namespace VideoGameShop
                 { "<NumberOfGames>",  numberOfGames },
                 { "<NumberOfUsers>", numberOfUsers },
                 { "<NumberOfBoughtGames>", numberOfBoughtGames },
+                { "<Profit>", profit },
                 { "<DATA>", now.ToString("dd.MM.yyyy")},
             };
 

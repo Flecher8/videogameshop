@@ -29,6 +29,13 @@ namespace VideoGameShop
             addPublisherForm.ShowDialog();
             form.Show();
         }
+        public void OpenAboutForm()
+        {
+            AboutProgramForm aboutProgramForm = new AboutProgramForm();
+            form.Hide();
+            aboutProgramForm.ShowDialog();
+            form.Show();
+        }
         public void OpenUpdatePublisherForm(DataGridView table)
         {
             int numberOfSelectedRows = table.SelectedRows.Count;

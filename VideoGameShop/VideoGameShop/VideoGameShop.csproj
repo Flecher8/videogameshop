@@ -55,12 +55,19 @@
     <Compile Include="Realizators\CardFormRealizer.cs" />
     <Compile Include="Realizators\DevelopersFormRealizer.cs" />
     <Compile Include="Realizators\PublishersFormRealizer.cs" />
+    <Compile Include="Realizators\SQLEditorFormRealizer.cs" />
     <Compile Include="Realizators\StatisticFormRealizer.cs" />
     <Compile Include="Realizators\UpdateDeveloperFormRealizer.cs" />
     <Compile Include="Realizators\UpdateGameFormRealizer.cs" />
     <Compile Include="Realizators\UpdatePublisherFormRealizer.cs" />
     <Compile Include="Realizators\UserMainFormRealizer.cs" />
     <Compile Include="Realizators\VideoGamesFormRealizer.cs" />
+    <Compile Include="View\AboutProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AboutProgramForm.Designer.cs">
+      <DependentUpon>AboutProgramForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddDeveloperForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +133,12 @@
     <Compile Include="View\PublishersForm.Designer.cs">
       <DependentUpon>PublishersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\SQLEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SQLEditorForm.Designer.cs">
+      <DependentUpon>SQLEditorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StatisticForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +175,9 @@
     <Compile Include="View\VideoGamesForm.Designer.cs">
       <DependentUpon>VideoGamesForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AboutProgramForm.resx">
+      <DependentUpon>AboutProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddDeveloperForm.resx">
       <DependentUpon>AddDeveloperForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +217,9 @@
     </Compile>
     <EmbeddedResource Include="View\PublishersForm.resx">
       <DependentUpon>PublishersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SQLEditorForm.resx">
+      <DependentUpon>SQLEditorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StatisticForm.resx">
       <DependentUpon>StatisticForm.cs</DependentUpon>

@@ -46,12 +46,12 @@ namespace VideoGameShop
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            realizer.OpenAboutForm();
         }
 
         private void sQLЗапросыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            realizer.OpenSQLEditorForm();
         }
 
         private void buttonPublishers_Click(object sender, EventArgs e)

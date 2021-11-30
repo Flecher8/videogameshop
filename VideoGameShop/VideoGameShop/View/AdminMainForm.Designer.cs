@@ -35,15 +35,14 @@ namespace VideoGameShop
             this.buttonPublishers = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.статистикиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sQLЗапросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
             this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLЗапросыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +95,6 @@ namespace VideoGameShop
             this.статистикиToolStripMenuItem,
             this.sQLЗапросыToolStripMenuItem,
             this.оПрограммеToolStripMenuItem,
-            this.справкаToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -114,45 +112,6 @@ namespace VideoGameShop
             this.статистикиToolStripMenuItem.Name = "статистикиToolStripMenuItem";
             this.статистикиToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.статистикиToolStripMenuItem.Text = "Статистики";
-            // 
-            // sQLЗапросыToolStripMenuItem
-            // 
-            this.sQLЗапросыToolStripMenuItem.Name = "sQLЗапросыToolStripMenuItem";
-            this.sQLЗапросыToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
-            this.sQLЗапросыToolStripMenuItem.Text = "SQL Запросы";
-            this.sQLЗапросыToolStripMenuItem.Click += new System.EventHandler(this.sQLЗапросыToolStripMenuItem_Click);
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
-            this.справкаToolStripMenuItem.Click += new System.EventHandler(this.справкаToolStripMenuItem_Click);
-            // 
-            // выходToolStripMenuItem
-            // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(496, 329);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(236, 75);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Отчёт";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem
             // 
@@ -181,6 +140,38 @@ namespace VideoGameShop
             this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
             this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Text = "TOP-10 самых дорогих компьютерных игр";
             this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Click += new System.EventHandler(this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem_Click);
+            // 
+            // sQLЗапросыToolStripMenuItem
+            // 
+            this.sQLЗапросыToolStripMenuItem.Name = "sQLЗапросыToolStripMenuItem";
+            this.sQLЗапросыToolStripMenuItem.Size = new System.Drawing.Size(92, 20);
+            this.sQLЗапросыToolStripMenuItem.Text = "SQL Запросы";
+            this.sQLЗапросыToolStripMenuItem.Click += new System.EventHandler(this.sQLЗапросыToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(496, 329);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(236, 75);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Отчёт";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // AdminMainForm
             // 
@@ -217,7 +208,6 @@ namespace VideoGameShop
         private System.Windows.Forms.ToolStripMenuItem статистикиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sQLЗапросыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripMenuItem tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem;

@@ -31,6 +31,13 @@ namespace VideoGameShop
             statisticForm.ShowDialog();
             form.Show();
         }
+        public void OpenAboutForm()
+        {
+            AboutProgramForm aboutProgramForm = new AboutProgramForm();
+            form.Hide();
+            aboutProgramForm.ShowDialog();
+            form.Show();
+        }
         public void OpenAutoForm()
         {
             AutoForm autoForm = new AutoForm();

@@ -164,6 +164,7 @@ namespace VideoGameShop
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
+            this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "AutoForm";
             this.Text = "Автоматический подбор игр";
             this.Load += new System.EventHandler(this.AutoForm_Load);

@@ -60,5 +60,15 @@ namespace VideoGameShop
         {
             realizer.findGames(dataGridView1);
         }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            realizer.OpenAboutForm();
+        }
     }
 }

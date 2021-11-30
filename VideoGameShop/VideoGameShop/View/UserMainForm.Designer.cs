@@ -30,9 +30,13 @@ namespace VideoGameShop
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.подборИгрПоХарактеристикамToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
@@ -73,11 +77,6 @@ namespace VideoGameShop
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -88,13 +87,51 @@ namespace VideoGameShop
             this.статистикаToolStripMenuItem,
             this.подборИгрПоХарактеристикамToolStripMenuItem,
             this.оПрограммеToolStripMenuItem,
-            this.справкаToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1224, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // статистикаToolStripMenuItem
+            // 
+            this.статистикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem,
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem,
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem,
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem});
+            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
+            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.статистикаToolStripMenuItem.Text = "Статистика";
+            // 
+            // tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem
+            // 
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Name = "tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem";
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Text = "TOP-10 наболее продаваемые компьютерные игры";
+            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Click += new System.EventHandler(this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem_Click);
+            // 
+            // tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem
+            // 
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Name = "tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem";
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Text = "TOP-10 лучших компьютерных игр по мнению критиков";
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Click += new System.EventHandler(this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem_Click);
+            // 
+            // tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem
+            // 
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Name = "tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem";
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Text = "TOP-10 лучших компьютерных игр по мнению пользователей";
+            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Click += new System.EventHandler(this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem_Click);
+            // 
+            // tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem
+            // 
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Name = "tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem";
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Text = "TOP-10 самых дорогих компьютерных игр";
+            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Click += new System.EventHandler(this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem_Click);
             // 
             // подборИгрПоХарактеристикамToolStripMenuItem
             // 
@@ -108,18 +145,14 @@ namespace VideoGameShop
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // справкаToolStripMenuItem
-            // 
-            this.справкаToolStripMenuItem.Name = "справкаToolStripMenuItem";
-            this.справкаToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.справкаToolStripMenuItem.Text = "Справка";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // checkBox16
             // 
@@ -500,45 +533,6 @@ namespace VideoGameShop
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             this.dataGridView1.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_ColumnHeaderMouseDoubleClick);
             // 
-            // статистикаToolStripMenuItem
-            // 
-            this.статистикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem,
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem,
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem,
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem});
-            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
-            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.статистикаToolStripMenuItem.Text = "Статистика";
-            // 
-            // tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem
-            // 
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Name = "tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem";
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Text = "TOP-10 наболее продаваемые компьютерные игры";
-            this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem.Click += new System.EventHandler(this.tOP10НаболееПродаваемыеКомпьютерныеИгрыToolStripMenuItem_Click);
-            // 
-            // tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem
-            // 
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Name = "tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem";
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Text = "TOP-10 лучших компьютерных игр по мнению критиков";
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem.Click += new System.EventHandler(this.tOP10ЛучшихКомпьютерныхИгрПоМнениюКритиковToolStripMenuItem_Click);
-            // 
-            // tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem
-            // 
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Name = "tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem";
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Text = "TOP-10 лучших компьютерных игр по мнению пользователей";
-            this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem.Click += new System.EventHandler(this.tOP10ЛучшихКомпьютерныхИгрПоМнениюПользователейToolStripMenuItem_Click);
-            // 
-            // tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem
-            // 
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Name = "tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem";
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Size = new System.Drawing.Size(420, 22);
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Text = "TOP-10 самых дорогих компьютерных игр";
-            this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem.Click += new System.EventHandler(this.tOP10СамыхДорогихКомпьютерныхИгрToolStripMenuItem_Click);
-            // 
             // UserMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,7 +597,6 @@ namespace VideoGameShop
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem подборИгрПоХарактеристикамToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.CheckBox checkBox16;
         private System.Windows.Forms.CheckBox checkBox15;
