@@ -73,20 +73,40 @@ namespace VideoGameShop
             System.Data.DataTable price = DB.GetDataBase($"SELECT price FROM Games WHERE game_name='{GameName}'");
             string prc = price.Rows[0]["price"].ToString();
 
-
+            System.Data.DataTable table = DB.GetDataBase($"SELECT game_name AS 'Название', " +
+                $"developer_company AS 'Разработчик', " +
+                $"publisher_company AS 'Публикатор', " +
+                $"ARRAY_OF_GENRES AS 'Жанры', " +
+                $"release_year AS 'Год выхода', " +
+                $"critics_score AS 'Оценка критиков', " +
+                $"cpu_name AS 'Мин. Процессор', " +
+                $"videocard_name AS 'Мин. Видеокарта', " +
+                $"ram_amount AS 'Мин. ОП.', " +
+                $"price AS 'Цена', " +
+                $"age_limit AS 'Возрастное ограничение', " +
+                $"official_page AS 'Сайт' " +
+                $"FROM Games, (SELECT Games.game_name AS GName, STRING_AGG(genre_name, ';') AS ARRAY_OF_GENRES FROM Games JOIN [Games-Genres] ON Games.game_name = [Games-Genres].game_name GROUP BY Games.game_name) T1 " +
+                $"WHERE  Games.game_name = T1.GName AND game_name='{GameName}'");
 
             FileInfo fileInfo = new FileInfo("product_check.docx");
             var items = new Dictionary<string, string>
             {
                 { "<CHECK_NUMBER>",  maxSale },
                 { "<GAME_NAME>", GameName},
+                { "<DEVELOPER>", table.Rows[0]["Разработчик"].ToString()},
+                { "<PUBLISHER>", table.Rows[0]["Публикатор"].ToString()},
+                { "<GENRES>", table.Rows[0]["Жанры"].ToString()},
+                { "<RELEASE_YEAR>", table.Rows[0]["Год выхода"].ToString()},
+                { "<CRITICS_SCORE>", table.Rows[0]["Оценка критиков"].ToString()},
+                { "<CPU_NAME>", table.Rows[0]["Мин. Процессор"].ToString()},
+                { "<VIDEOCARD_NAME>", table.Rows[0]["Мин. Видеокарта"].ToString()},
+                { "<RAM_AMOUNT>", table.Rows[0]["Мин. ОП."].ToString()},
                 { "<PRICE>", prc},
                 { "<DATA>", now.ToString("dd.MM.yyyy")},
             };
             
             Microsoft.Office.Interop.Word.Application app = null;
             //Microsoft.Office.Interop.Word.Application WordApp = null;
-
             DialogResult result = MessageBox.Show("Сохранить товарный чек?",
                     "Скачать товарный чек",
                     MessageBoxButtons.YesNo,

@@ -86,6 +86,7 @@ namespace VideoGameShop
             {
                 developersComboBox.Items.Add(table.Rows[i].Field<string>("developer_company"));
             }
+            //developersComboBox.Items.Add("UNKNOWN");
         }
         // Проверка все ли нужные поля заполнены чем-то
         protected bool allNeededDataFull()

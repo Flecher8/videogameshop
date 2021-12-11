@@ -63,6 +63,7 @@ namespace VideoGameShop
             {
                 for (int i = 0; i < table.SelectedRows.Count; i++)
                 {
+                    //DB.UpdateDataBase($"UPDATE Games SET developer_company ='UNKNOWN' WHERE developer_company='{table.SelectedRows[i].Cells[0].Value.ToString()}'");
                     DB.UpdateDataBase($"DELETE FROM Developers " +
                         $"WHERE developer_company='{table.SelectedRows[i].Cells[0].Value.ToString()}'");
                 }
