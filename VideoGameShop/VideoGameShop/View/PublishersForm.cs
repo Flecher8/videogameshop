@@ -27,12 +27,14 @@ namespace VideoGameShop
         private void button2_Click(object sender, EventArgs e)
         {
             realizer.OpenAddPublisherForm();
+            realizer.CleanCheckBoxes(checkBox1, checkBox2);
             realizer.UpdateDataGridView(dataGridView1);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             realizer.OpenUpdatePublisherForm(dataGridView1);
+            realizer.CleanCheckBoxes(checkBox1, checkBox2);
             realizer.UpdateDataGridView(dataGridView1);
         }
 
@@ -45,12 +47,13 @@ namespace VideoGameShop
         private void button5_Click(object sender, EventArgs e)
         {
             realizer.CleanTextBoxes(textBox1, textBox2);
+            realizer.CleanCheckBoxes(checkBox1, checkBox2);
             realizer.UpdateDataGridView(dataGridView1);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            realizer.FindPublisher(dataGridView1, textBox1, textBox2);
+            realizer.FindPublisher(dataGridView1, textBox1, textBox2, checkBox1, checkBox2);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)

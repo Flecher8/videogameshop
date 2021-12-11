@@ -76,6 +76,13 @@ namespace VideoGameShop
                 arr[i].Text = "";
             }
         }
+        public void CleanCheckBoxes(params CheckBox[] arr)
+        {
+            for(int i = 0; i < arr.Length; i++)
+            {
+                arr[i].CheckState = CheckState.Unchecked;
+            }
+        }
         private string makeSearchLineForCompanyName(Control textBoxCompanyName)
         {
             if(textBoxCompanyName.Text != "")
@@ -115,7 +122,7 @@ namespace VideoGameShop
             return result;
         }
         // Проверяет не пусты ли элементы и возвращает строку критериев
-        private string checkEmptyAndFind(Control[] arr)
+        private string checkEmptyAndFind(params Control[] arr)
         {
             string companyName = makeSearchLineForCompanyName(arr[0]);
             string location = makeSearchLineForLocation(arr[1]);
@@ -123,14 +130,38 @@ namespace VideoGameShop
             {
                 return "";
             }
-
             return "WHERE " + makeCriteries(companyName, location);
         }
-        public void FindDevelopers(DataGridView table, params Control[] arr)
+        private string checkCheckBoxes(TextBox textBox1, TextBox textBox2, params CheckBox[] arr)
         {
+            string result = "";
+            bool yes = false;
+            if(arr[0].Checked)
+            {
+                yes = true;
+                result += "official_page <> ''";
+            }
+            if(arr[1].Checked)
+            {
+                result += " ";
+                result += "ORDER BY LOCATION";
+            }
+            if (checkEmptyAndFind(textBox1, textBox2) == "" && yes)
+            {
+                return "WHERE " + result;
+            }
+            if(yes)
+            {
+                return "AND " + result;
+            }
+            return result;
+        }
+        public void FindDevelopers(DataGridView table, TextBox textBox1, TextBox textBox2, CheckBox checkBox1, CheckBox checkBox2)
+        {
+            MessageBox.Show(checkEmptyAndFind(textBox1, textBox2) + " " + checkCheckBoxes(textBox1, textBox2, checkBox1, checkBox2));
             table.DataSource = DB.GetDataBase("SELECT developer_company AS 'Название компании', " +
-                "location AS 'Локация', official_page AS 'Сайт' FROM Developers " 
-                + checkEmptyAndFind(arr));
+                "location AS 'Локация', official_page AS 'Сайт' FROM Developers "
+                + checkEmptyAndFind(textBox1, textBox2) + " " + checkCheckBoxes(textBox1, textBox2, checkBox1, checkBox2));
         }
     }
 }
